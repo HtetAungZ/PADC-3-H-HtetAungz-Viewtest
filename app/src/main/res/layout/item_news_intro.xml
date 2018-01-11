@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="230dp"
+    android:layout_height="60dp">
+
+
+    <TextView
+        android:id="@+id/tv_news_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/news_intro"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:id="@+id/view_separator"
+        android:layout_alignParentEnd="true"
+        />
+
+</RelativeLayout>

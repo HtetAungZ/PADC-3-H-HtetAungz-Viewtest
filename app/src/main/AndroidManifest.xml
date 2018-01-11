@@ -10,22 +10,38 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
 
-        <activity android:name=".ViewActivity" android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".activities.NewsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+
+
 
         </activity>
 
 
-        <activity android:name=".NewsDetailsActivity"
-          android:theme="@style/AppTheme.NoActionBar"  >
+        <activity
+            android:name=".activities.NewsDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity
+            android:name=".activities.NewsByCategoryActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
 
 
 
-
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
