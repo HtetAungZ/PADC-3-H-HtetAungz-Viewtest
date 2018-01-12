@@ -54,12 +54,57 @@
             android:textColor="@color/secondary_text"
             android:textSize="16sp" />
 
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rv_sub_sport_news"
-            android:layout_below="@id/tv_one_football"/>
 
+        <View
+            android:id="@+id/view_bar"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/tv_one_football" />
+
+        <ImageView
+            android:id="@+id/iv_sub_sport_news"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/view_bar"
+            android:layout_margin="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_football_news_2" />
+
+        <TextView
+            android:id="@+id/tv_sub_sport_news_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_sub_sport_news"
+            android:layout_toRightOf="@id/iv_sub_sport_news"
+            android:text="Real Madrid dominate Champions Leagues Team of"
+            android:textColor="@color/primary_text" />
+
+        <ImageView
+            android:id="@+id/iv_one_football"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@id/iv_sub_sport_news"
+            android:layout_below="@id/tv_sub_sport_news_title"
+            android:layout_toRightOf="@id/iv_sub_sport_news"
+            android:scaleType="fitEnd"
+            android:src="@drawable/img_one_football" />
+
+
+        <TextView
+            android:id="@+id/tv_sub_one_football"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/iv_one_football"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/iv_one_football"
+            android:text="Onefootball" />
+
+
+        <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/rv_sub_sport_news"-->
+        <!--android:layout_below="@id/tv_one_football"/>-->
 
 
     </RelativeLayout>

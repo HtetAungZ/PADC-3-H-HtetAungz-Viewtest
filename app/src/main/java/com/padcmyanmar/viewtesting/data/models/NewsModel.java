@@ -35,7 +35,7 @@ public class NewsModel {
 
     public void loadNews() {
 
-        mDataAgent.loadNews();
+        mDataAgent. loadNews();
     }
 
 

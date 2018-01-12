@@ -29,11 +29,11 @@
     <string name="upload_time"> 6h </string>
 
 
-    <string name="news_title_1"><font fgcolor="#304c9b">Daca must stay</font> / <font fgcolor="#2d2727">Judge blocks Trump move to end program for immigrants</font></string>
-    <string name="news_intro"><font fgcolor="#304c9b"> 'I'll take the heat'</font> / <font fgcolor="#2d2727">Trump touts 'bill of love' for Dreamers</font></string>
-    <string name="news_title_2"><font fgcolor="#304c9b"> Exclusive </font> / <font fgcolor="#2d2727">US to loosen nuclear weapons policy raising fears of nuclear war</font></string>
-    <string name="news_title_3"><font fgcolor="#304c9b"> California </font> / <font fgcolor="#2d2727">At least a dozen killed after the rains pound Santa Barbara</font></string>
-    <string name="text_news"><font fgcolor="#304c9b"> James Franco </font> / <font fgcolor="#2d2727">Actor denies sexual misconduct claims in Colbert interview</font></string>
+    <string name="news_title_1"><font color="#304c9b">Daca must stay</font> / <font color="#2d2727">Judge blocks Trump move to end program for immigrants</font></string>
+    <string name="news_intro"><font color="#304c9b"> 'I'll take the heat'</font> / <font color="#2d2727">Trump touts 'bill of love' for Dreamers</font></string>
+    <string name="news_title_2"><font color="#304c9b"> Exclusive </font> / <font color="#2d2727">US to loosen nuclear weapons policy raising fears of nuclear war</font></string>
+    <string name="news_title_3"><font color="#304c9b"> California </font> / <font color="#2d2727">At least a dozen killed after the rains pound Santa Barbara</font></string>
+    <string name="text_news"><font color="#304c9b"> James Franco </font> / <font color="#2d2727">Actor denies sexual misconduct claims in Colbert interview</font></string>
 
 
 </resources>

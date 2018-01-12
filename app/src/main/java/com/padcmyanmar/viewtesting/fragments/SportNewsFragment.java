@@ -14,6 +14,7 @@ import com.padcmyanmar.viewtesting.R;
 import com.padcmyanmar.viewtesting.adapters.ItemNewsIntroAdapter;
 import com.padcmyanmar.viewtesting.adapters.ItemSubSportNewsAdapter;
 
+import com.padcmyanmar.viewtesting.adapters.SportNewsAdapter;
 import com.padcmyanmar.viewtesting.viewholders.ItemSubSportNewsViewHolder;
 
 
@@ -26,33 +27,32 @@ import butterknife.ButterKnife;
 
 public class SportNewsFragment extends Fragment {
 
-    @BindView(R.id.rv_sub_sport_news)
-    RecyclerView rvSubSportNews;
+//    @BindView(R.id.rv_sub_sport_news)
+//    RecyclerView rvSubSportNews;
 
-//    @BindView(R.id.rv_sport_news)
-//    RecyclerView rvSportNews;
+    @BindView(R.id.rv_sport_news)
+    RecyclerView rvSportNews;
 
 
-    private ItemSubSportNewsAdapter mitemSubSportNewsAdapter;
-//    private SportNewsAdapter msportNewsAdapter;
+//    private ItemSubSportNewsAdapter mitemSubSportNewsAdapter;
+    private SportNewsAdapter msportNewsAdapter;
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.item_sport_news, container, false);
+        View view = inflater.inflate(R.layout.fragment_sport_news, container, false);
         ButterKnife.bind(this,view);
 
-        LinearLayoutManager subNewslinearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, true);
-        rvSubSportNews.setLayoutManager(subNewslinearLayoutManager);
-        mitemSubSportNewsAdapter = new ItemSubSportNewsAdapter();
-        rvSubSportNews.setAdapter(mitemSubSportNewsAdapter);
-//
-//        LinearLayoutManager sportNewslinearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, true);
-//        rvSportNews.setLayoutManager(sportNewslinearLayoutManager);
-//        msportNewsAdapter = new SportNewsAdapter();
-//        rvSportNews.setAdapter(msportNewsAdapter);
+//        LinearLayoutManager subNewslinearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, true);
+//        rvSubSportNews.setLayoutManager(subNewslinearLayoutManager);
+//        mitemSubSportNewsAdapter = new ItemSubSportNewsAdapter();
+//        rvSubSportNews.setAdapter(mitemSubSportNewsAdapter);
 
+        LinearLayoutManager sportNewslinearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, true);
+        rvSportNews.setLayoutManager(sportNewslinearLayoutManager);
+        msportNewsAdapter = new SportNewsAdapter();
+        rvSportNews.setAdapter(msportNewsAdapter);
 
         return view;
     }

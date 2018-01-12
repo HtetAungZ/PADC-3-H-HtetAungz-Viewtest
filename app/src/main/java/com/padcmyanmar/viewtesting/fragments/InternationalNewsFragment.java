@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.padcmyanmar.viewtesting.R;
+import com.padcmyanmar.viewtesting.adapters.ItemInternationalNewsAdapter;
 import com.padcmyanmar.viewtesting.adapters.ItemNewsIntroAdapter;
 import com.padcmyanmar.viewtesting.adapters.ItemTextNewsAdapter;
 
@@ -24,43 +25,43 @@ import butterknife.ButterKnife;
 public class InternationalNewsFragment extends Fragment {
 
 
-//    @BindView(R.id.rv_international_news)
-//    RecyclerView rvInternationalNews;
+    @BindView(R.id.rv_international_news)
+    RecyclerView rvInternationalNews;
 
-    @BindView(R.id.rv_intro)
-    RecyclerView rvNewsIntro;
+//    @BindView(R.id.rv_intro)
+//    RecyclerView rvNewsIntro;
+//
+//    @BindView(R.id.rv_text_news)
+//    RecyclerView rvTextNews;
 
-    @BindView(R.id.rv_text_news)
-    RecyclerView rvTextNews;
 
-
-    private ItemNewsIntroAdapter mitemNewsIntroAdapter;
-    private ItemTextNewsAdapter mitemTextNewsAdapter;
-//    private ItemInternationalNewsAdapter mitemInternationalNewsAdapter;
+//    private ItemNewsIntroAdapter mitemNewsIntroAdapter;
+//    private ItemTextNewsAdapter mitemTextNewsAdapter;
+   private ItemInternationalNewsAdapter mitemInternationalNewsAdapter;
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.item_international_news, container, false);
+        View view = inflater.inflate(R.layout.fragment_international_news, container, false);
         ButterKnife.bind(this, view);
 
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        rvInternationalNews.setLayoutManager(linearLayoutManager);
+        mitemInternationalNewsAdapter = new ItemInternationalNewsAdapter();
+        rvInternationalNews.setAdapter(mitemInternationalNewsAdapter);
+
+
+//        LinearLayoutManager newsintrolinearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, true);
+//        rvNewsIntro.setLayoutManager(newsintrolinearLayoutManager);
+//        mitemNewsIntroAdapter = new ItemNewsIntroAdapter();
+//        rvNewsIntro.setAdapter(mitemNewsIntroAdapter);
 //
-//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-//        rvInternationalNews.setLayoutManager(linearLayoutManager);
-//        mitemInternationalNewsAdapter = new ItemInternationalNewsAdapter();
-//        rvInternationalNews.setAdapter(mitemInternationalNewsAdapter);
-
-
-        LinearLayoutManager newsintrolinearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, true);
-        rvNewsIntro.setLayoutManager(newsintrolinearLayoutManager);
-        mitemNewsIntroAdapter = new ItemNewsIntroAdapter();
-        rvNewsIntro.setAdapter(mitemNewsIntroAdapter);
-
-        LinearLayoutManager textnewslinearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, true);
-        rvTextNews.setLayoutManager(textnewslinearLayoutManager);
-        mitemTextNewsAdapter = new ItemTextNewsAdapter();
-        rvTextNews.setAdapter(mitemTextNewsAdapter);
+//        LinearLayoutManager textnewslinearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, true);
+//        rvTextNews.setLayoutManager(textnewslinearLayoutManager);
+//        mitemTextNewsAdapter = new ItemTextNewsAdapter();
+//        rvTextNews.setAdapter(mitemTextNewsAdapter);
 
 
         return view;
