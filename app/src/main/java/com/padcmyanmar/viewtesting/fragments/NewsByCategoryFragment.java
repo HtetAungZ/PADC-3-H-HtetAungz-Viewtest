@@ -16,6 +16,7 @@ import com.padcmyanmar.viewtesting.R;
 import com.padcmyanmar.viewtesting.adapters.NewsAdapter;
 import com.padcmyanmar.viewtesting.adapters.NewsByCategoryAdapter;
 import com.padcmyanmar.viewtesting.data.models.NewsModel;
+import com.padcmyanmar.viewtesting.data.vo.NewsVO;
 import com.padcmyanmar.viewtesting.delegates.NewsActionDelegate;
 import com.padcmyanmar.viewtesting.events.LoadedNewsEvent;
 
@@ -66,7 +67,7 @@ public class NewsByCategoryFragment extends Fragment implements NewsActionDelega
 
 
     @Override
-    public void onTapNewsItem() {
+    public void onTapNewsItem(NewsVO news) {
 
     }
 

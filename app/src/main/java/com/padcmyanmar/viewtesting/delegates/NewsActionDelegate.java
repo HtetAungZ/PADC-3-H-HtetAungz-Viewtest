@@ -1,5 +1,7 @@
 package com.padcmyanmar.viewtesting.delegates;
 
+import com.padcmyanmar.viewtesting.data.vo.NewsVO;
+
 /**
  * Created by ICE on 17-12-2017.
  */
@@ -7,7 +9,7 @@ package com.padcmyanmar.viewtesting.delegates;
 public interface NewsActionDelegate {
 
 
-    void onTapNewsItem();
+    void onTapNewsItem(NewsVO tappedNews);
 
     void onTapCommentButton();
 

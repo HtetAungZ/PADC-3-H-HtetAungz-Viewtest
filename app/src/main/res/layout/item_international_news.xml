@@ -6,21 +6,18 @@
 
 
     <View
+        android:id="@+id/view_bar_root_top"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="12dp"
-        android:background="@color/colorPrimaryDark"
-        android:id="@+id/view_bar_root_top"
-        />
-
-
+        android:background="@color/colorPrimaryDark" />
 
     <TextView
         android:id="@+id/tv_news_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/view_bar_root_top"
         android:layout_alignParentStart="true"
+        android:layout_below="@id/view_bar_root_top"
         android:layout_marginStart="12dp"
         android:fontFamily="serif"
         android:text="@string/news_type"
@@ -39,7 +36,6 @@
         android:text="@string/news_type_time" />
 
 
-
     <android.support.v7.widget.CardView
         android:id="@+id/cv_news_brief_1"
         android:layout_width="match_parent"
@@ -50,16 +46,16 @@
         android:layout_marginTop="12dp">
 
         <RelativeLayout
+            android:id="@+id/rl_main_news"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
 
             <View
+                android:id="@+id/view_bar_main_top"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/colorPrimaryDark"
-                android:id="@+id/view_bar_main_top"
-              />
+                android:background="@color/colorPrimaryDark" />
 
             <TextView
                 android:id="@+id/tv_news_title_1"
@@ -88,17 +84,6 @@
                 android:src="@drawable/img_news_1" />
 
 
-            <TextView
-                android:id="@+id/tv_question_and_answer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/tv_news_title_1"
-                android:layout_below="@id/iv_news_1"
-                android:text="@string/news_intro"
-                android:textSize="18sp" />
-
-
-
             <!--<android.support.v7.widget.RecyclerView-->
             <!--android:id="@+id/rv_intro"-->
             <!--android:layout_width="match_parent"-->
@@ -112,13 +97,35 @@
     </android.support.v7.widget.CardView>
 
 
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_sencondary_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/cv_news_brief_1"
+        android:layout_alignRight="@id/cv_news_brief_1"
+        android:layout_below="@id/cv_news_brief_1">
+
+        <TextView
+            android:id="@+id/tv_question_and_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_news_title_1"
+            android:layout_below="@id/iv_news_1"
+            android:layout_margin="8dp"
+            android:text="@string/news_intro"
+            android:textColor="@color/primary_text"
+            android:textSize="14sp" />
+    </android.support.v7.widget.CardView>
+
+
     <LinearLayout
         android:id="@+id/ll_sub_news"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@id/cv_news_brief_1"
         android:layout_alignStart="@id/cv_news_brief_1"
-        android:layout_below="@id/cv_news_brief_1"
+        android:layout_below="@id/cv_sencondary_news"
+        android:layout_marginTop="12dp"
         android:orientation="horizontal"
         android:weightSum="2">
 
@@ -127,12 +134,13 @@
             android:layout_width="wrap_content"
             android:layout_height="190dp"
             android:layout_gravity="top|start"
-            android:layout_margin="12dp"
+
             android:layout_weight="1">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp">
 
 
                 <TextView
@@ -169,13 +177,14 @@
             android:layout_width="wrap_content"
             android:layout_height="190dp"
             android:layout_gravity="top|end"
-            android:layout_margin="12dp"
+
             android:layout_weight="1">
 
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp">
 
 
                 <TextView
